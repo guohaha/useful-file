@@ -1,0 +1,88 @@
+解决 CodeIgniter 框架应用中，出现Disallowed Key Characters错误提示的方法。找到core文件夹下的Input文件，将下面的代码：
+view source
+print
+?
+01
+	function _clean_input_keys($str)
+02
+	{
+03
+	    if ( ! preg_match("/^[a-z0-9:_\/-]+$/i", $str))
+04
+	    {
+05
+	        exit('Disallowed Key Characters.');
+06
+	    }
+07
+	    // Clean UTF-8 if supported
+08
+	    if (UTF8_ENABLED === TRUE)
+09
+	    {
+10
+	        $str = $this->uni->clean_string($str);
+11
+	    }
+12
+	    return $str;
+13
+	}
+
+改成这样：
+01
+	function _clean_input_keys($str)  
+02
+	{  
+03
+	    $config = &get_config('config');  
+04
+	    if ( ! preg_match("/^[".$config['permitted_uri_chars']."]+$/i", rawurlencode($str)))  
+05
+	    {  
+06
+	        exit('Disallowed Key Characters.');  
+07
+	    }  
+08
+	     
+09
+	    // Clean UTF-8 if supported
+10
+	    if (UTF8_ENABLED === TRUE)
+11
+	    {
+12
+	        $str = $this->uni->clean_string($str);
+13
+	    }
+14
+	    return $str;  
+15
+	} 
+
+或者改成：
+01
+	function _clean_input_keys($str)
+02
+	{
+03
+	    if(preg_match("/^,_[a-z0-9:_\/-]+$/",$str)){
+04
+	        $str = preg_replace("/,_/","",$str);
+05
+	    }
+06
+	              
+07
+	    if ( ! preg_match("/^[a-z0-9:_\/-]+$/i", $str))
+08
+	    {
+09
+	        exit('Disallowed Key Characters.'.$str);
+10
+	    }
+11
+	    return $str;
+12
+	}

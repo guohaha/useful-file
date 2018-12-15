@@ -1,0 +1,74 @@
+本文为大家讲解的是PHP错误Notice : Use of undefined constant 的完美解决方法,这个php的非致命错误提醒在pph5.3以上的版本中出现的频率非常好,主要是因为php.ini中的错误级别配置的问题,感兴趣的同学参考下.
+
+问题说明;
+
+今天修改公司的网站，提示Notice : Use of undefined constant ，通过下面的方法解决了，最好是error_reporting(0);不需要更改配置
+Notice: Use of undefined constant ALL_PS - assumed 'ALL_PS' in E:Servervhostswww.lvtao.netglobal.php on line 50
+
+Notice: Undefined index: EaseTemplateVer in E:Servervhostswww.lvtao.netlibstemplate.core.php on line 51
+
+Notice: Use of undefined constant uid - assumed 'uid' in E:Servervhostswww.lvtao.netglobal.php on line 54
+
+Notice: Undefined index: uid in E:Servervhostswww.lvtao.netglobal.php on line 54
+
+Notice: Use of undefined constant cuid - assumed 'cuid' in E:Servervhostswww.lvtao.netglobal.php on line 55
+
+Notice: Undefined index: cuid in E:Servervhostswww.lvtao.netglobal.php on line 55
+
+Notice: Use of undefined constant shell - assumed 'shell' in E:Servervhostswww.lvtao.netglobal.php on line 56
+
+Notice: Undefined index: shell in E:Servervhostswww.lvtao.netglobal.php on line 56
+
+Notice: Use of undefined constant cshell - assumed 'cshell' in E:Servervhostswww.lvtao.netglobal.php on line 57
+
+Notice: Undefined index: cshell in E:Servervhostswww.lvtao.netglobal.php on line 57
+
+Notice: Use of undefined constant username - assumed 'username' in E:Servervhostswww.lvtao.netglobal.php on line 58
+
+Notice: Undefined index: username in E:Servervhostswww.lvtao.netglobal.php on line 58
+
+Notice: Use of undefined constant cusername - assumed 'cusername' in E:Servervhostswww.lvtao.netglobal.php on line 59
+
+Notice: Undefined index: cusername in E:Servervhostswww.lvtao.netglobal.php on line 59
+
+Notice: Use of undefined constant id - assumed 'id' in E:Servervhostswww.lvtao.netcompanyjob.php on line 10
+
+Notice: Use of undefined constant id - assumed 'id' in E:Servervhostswww.lvtao.netcompanyjob.php on line 14
+
+Notice: Use of undefined constant content - assumed 'content' in E:Servervhostswww.lvtao.netcompanyjob.php on line 16
+
+Notice: Use of undefined constant content - assumed 'content' in E:Servervhostswww.lvtao.netcompanyjob.php on line 16
+
+Notice: Use of undefined constant description - assumed 'description' in E:Servervhostswww.lvtao.netcompanyjob.php on line 17
+
+Notice: Use of undefined constant description - assumed 'description' in E:Servervhostswww.lvtao.netcompanyjob.php on line 17
+
+Notice: Use of undefined constant provinceid - assumed 'provinceid' in E:Servervhostswww.lvtao.netcompanyjob.php on line 18
+
+Notice: Use of undefined constant cityid - assumed 'cityid' in E:Servervhostswww.lvtao.netcompanyjob.php on line 19
+
+Notice: Use of undefined constant hy - assumed 'hy' in E:Servervhostswww.lvtao.netcompanyjob.php on line 20
+
+Notice: Undefined variable: content in E:Servervhostswww.lvtao.netlibstemplate.core.php on line 557
+
+进入网站会出现大量类似下面的提示，但是可以正常显示和运行
+
+Notice: Use of undefined constant ctbTitle - assumed 'ctbTitle' in d:ctb1.5ctbincludeconfig.php on line 23...
+
+b答案：这些是 PHP 的提示而非报错，PHP 本身不需要事先声明变量即可直接使用，但是对未声明变量会有提示。一般作为正式的网站会把提示关掉的，甚至连错误信息也被关掉
+
+关闭 PHP 提示的方法
+
+搜索php.ini：
+
+error_reporting = E_ALL
+
+改为：
+
+error_reporting = E_ALL & ~E_NOTICE
+
+还有个不是办法的办法就是
+
+在每个文件头上加
+
+error_reporting(0); 虽然不好弄但是可以解决问题！！！！！！这个比较好用

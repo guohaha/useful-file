@@ -1,0 +1,69 @@
+mysql 中  将时间戳 与 日期或者日期字符串 互相转换的方法 ：
+	select FROM_UNIXTIME(1435038194)	-> 将指定的 时间戳 转换为 日期或者日期字符串
+	select unix_timestamp(date)                  ->  将指定的 日期或者日期字符串 转换为 时间戳
+
+php中：   1.将时间戳 与 日期或者日期字符串 互相转换的方法 ：
+	date('Y-m-d H:i:s' , time())-> 将当前的 时间戳 转换为 日期或者日期字符串
+	strtotime(date('Y-m-d H:i:s' , time()))->  将当前的 日期或者日期字符串 转换为 时间戳
+	
+	2.获取前一天的 日期  (获取过去或将来的年份、月份、日期 同理)
+	date('Y-m-d', strtotime(date('Y-m-d', time()) . ' -1 day'))
+//////////////////////////////////////////////////////////////////////////////////////
+给MySQL导入数据的方法：http://www.lezhu99.com/2416.html
+
+
+////////////////////////////////////////////////////////////////////////////////
+测试平台：fir.im  （2472642886@qq.com   198911221316 ）
+   
+
+/////////////////////////////////////////////////////////////////////////////////
+问题资讯平台 drupal Lewis1314(2472642886@qq.com , liu198911221316)
+
+///////////////////////////////////////////////////////////////////////////////////////
+//PHP培训   http://www.itbool.com/php-video.html（燕十八）**
+	    http://www.sjyhome.com/sitemap.html
+	    http://www.kuaixuewang.com/index.php?course.html（good。2472642886@qq.com。198911221316）
+//学习   http://www.chuanke.com/ 
+             http://www.php100.com/
+             http://blog.csdn.net/qq1355541448/article/details/8669915
+
+//HTML5学习网站：http://www.runoob.com
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////
+//前段学习平台
+http://www.w3school.com.cn（测试代码页面：http://www.w3school.com.cn/tiy/t.asp?f=html5_video_all）
+
+
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//超级来放单 接口测试：http://laifangdan.searchchinahouse.com/test/interface_supervisit/接口方法名称
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////
+CodeIgniter 框架 用户手册：
+   http://ci3doc.vlian888.com/
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////
+推送：
+ios部分：http://blog.csdn.net/binyao02123202/article/details/44221871
+测试（developer）与正式(production)：http://zxs19861202.iteye.com/blog/1532460
+php部分：
+要修改的地方：
+	1，首先把PHP目录下面的ssleay32.dll和libeay32.dll复制到 windows下的system32目录下
+	2，修改PHP.ini，开启extension=php_openssl.dll
+	3，重启web服务器
+	以上步骤让php支持openssl的 
+http://bbs.appbyme.com/thread-3341-1-1.html
+http://www.php100.com/html/webkaifa/PHP/PHPyingyong/2013/0608/13530.html
+Provider->APNS->Client App。（你有可能是 Provider 或者 Client APP）
+       Provider是给你手机应用发出推送消息的服务器，
+       而APNS（Apple Push Notification Service）则是苹果消息推送服务器。
+      你本地的服务器当需要给应用推送一条消息的时候，先要将消息发出到苹果推送服务器，
+      然后再由苹果推送服务器将消息发到安装了该应用的手机。
+
+
+
+
+	

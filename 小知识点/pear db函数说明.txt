@@ -1,0 +1,11 @@
+connect()：数据库链接函数
+query()：SQL语句执行函数
+execute()：SQL语句执行函数，与query()函数使用方式略有不同，具体可参考pear/db/common.php文件
+setFetchMode()：设定返回记录集是数字索引数组还是关联数组或者对象
+numRows()：返回记录集有多少行
+numCols()：返回记录集有多少列
+free()：释放记录集
+disconnect()：关闭数据库链接
+affectedRows()：操作影响的记录行数
+isManip()：判断一个查询是数据处理还是数据定义操作
+使用Pear DB::limitQuery方法保证数据库兼容性

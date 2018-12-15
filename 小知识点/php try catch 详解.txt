@@ -1,0 +1,65 @@
+http://jasionq.blog.163.com/blog/static/10970577920130180146796/
+
+
+在php语言中有许多语法需要我们去不断的熟悉，然后才能灵活的运用，编写我们需要的代码程序。在这篇文章中我们将为大家介绍PHP中try{}catch{}的用法。
+
+
+try 
+ { //...} 
+ catch(Exception $e) 
+ { //...}
+
+PHP中try{}catch{}是异常处理.
+
+将要执行的代码放入TRY块中,如果这些代码执行过程中某一条语句发生异常,则程序直接跳转到CATCH块中,由$e收集错误信息和显示.
+
+PHP中try{}catch{}语句 
+
+为了进一步处理异常，我们需要使用PHP中try{}catch{}----包括Try语句和至少一个的catch语句。任何调用 可能抛出异常的方法的代码都应该使用try语句。Catch语句用来处理可能抛出的异常。以下显示了我们处理getCommandObject()抛出的 异常的方法：
+
+1.< ?php   
+2.try {   
+3.$mgr = new CommandManager();   
+4.$cmd = $mgr->getCommandObject("realcommand");   
+5.$cmd->execute();   
+6.} catch (Exception $e) {   
+7.print $e->getMessage();   
+8.exit();   
+9.}   
+10.?>   
+
+可以看到，通过结合使用throw关键字和PHP中try{}catch{}，我们可以避免错误标记“污染”类方法返回的值。因为“异常”本身就是一种与其它任何对象不同的PHP内建的类型，不会产生混淆。
+
+如果抛出了一个异常，try语句中的脚本将会停止执行，然后马上转向执行catch语句中的脚本。
+
+如果异常抛出了却没有被捕捉到，就会产生一个fatal error。
+
+php try catch的使用
+
+
+function ActionSend($mobile, $key='')
+ {
+   
+   try
+  {
+   if (empty($key)) {
+    throw new Exception('key值不能为空');
+   }
+   if($key != 'adfasdfdasfs') {
+    throw new Exception('key值不一致');
+   }
+   echo 'oo';
+  }
+  catch(Exception $e)
+  {
+   $info['msg'] = $e->getMessage();
+  }
+  return $info;
+ }
+1.Try - 使用异常的函数应该位于 "try" 代码块内。如果没有触发异常，则代码将照常继续执行。但是如果异常被触发，会抛出一个异常。
+2.Throw - 这里规定如何触发异常。每一个 "throw" 必须对应至少一个 "catch"
+3.Catch - "catch" 代码块会捕获异常，并创建一个包含异常信息的对象
+
+当异常被抛出时，其后的代码不会继续执行，PHP 会尝试查找匹配的 "catch" 代码块。
+
+如果异常没有被捕获，而且又没用使用 set_exception_handler() 作相应的处理的话，那么将发生一个严重的错误（致命错误），并且输出 "Uncaught Exception" （未捕获异常）的错误消息。

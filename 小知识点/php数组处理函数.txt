@@ -1,0 +1,112 @@
+http://www.jb51.net/article/27741.htm
+
+在数组中搜索一个特定值，如果找到返回TRUE否则返回FALSE 
+boolean in_array(mixed needle,array haystack[,boolean strict]) 
+
+在数组中找到一个指定的健，如果找到返回TRUE否则返回FALSE 
+boolean array_eky_exists(mixed key,array array) 
+
+在数组中搜索一个特定值，如果找到返回TRUE否则返回FALSE 
+boolean array_search(mixed needle,array haystack[,boolean strict]) 
+
+获取数组所有键组成的新数组 
+array array_keys(array array[,mixed search_value]) 
+
+获取数组所有值组成的新数组 
+array array_values(array array) 
+
+确定数组大小 
+integer count(array array[,int mode]) 
+
+integer sizeof(array array[,int mode]) 
+
+统计数组元素出现频率 
+array array_count_values(array array) 
+
+删除数组中重复的值，返回一个由唯一值组成的数组 
+array array_unique(array array) 
+
+逆置数组元素顺序,preserve_key如果为TRUE则数组键值顺序不变 
+array array_reverse(array array[,boolean preserve_key]) 
+
+置换数组键和值 
+array array_flip(array array) 
+
+数组顺序排序，sort_flags参数可选，默认行为 
+SORT_NUMBERIC，按数值排序，对整数或浮点数排序很有用 
+
+SORT_REGULAR，按照ASCII值排序 
+
+SORT_STRING，按接近人所认识的正确顺序排序 
+
+asort函数键值顺序不变 
+
+void sort(array array[,int sort_flags]) 
+
+void asort(array array[,int sort_flags]) 
+
+数组逆序排序，sort_flags参数可选，默认行为 
+SORT_NUMBERIC，按数值排序，对整数或浮点数排序很有用 
+
+SORT_REGULAR，按照ASCII值排序 
+
+SORT_STRING，按接近人所认识的正确顺序排序 
+
+arsort函数键值顺序不变 
+
+void rsort(array array[,int sort_flags]) 
+
+void arsort(array array[,int sort_flags]) 
+
+数组自然排序 
+void natsort(array array) 
+
+不区分大小写的自然排序 
+void natcasesort(array array) 
+
+健键值对数组排序 
+boolean ksort(array array[,int sort_flags]) 
+
+健键值对数组逆序排序 
+boolean krsort(array array[,int sort_flags]) 
+
+根据用户自定义顺序排序 
+void usort(array array,callback function_name) 
+
+将数组合并到一起，返回一个联合的数组。array_merge后面覆盖前面，array_merge_recursive合并在一起 
+array array_merge(array array1[array array2……])//一个以上 
+
+array array_merge_recursive(array array1,array array2[,array ……])//两个以上 
+
+键和值组成新的数组 
+array array_combine(array key,array value) 
+
+返回数组一部分，从健offset开始，到offse+length位置结束 
+array array_slice(array array, int offset [,int length]) 
+
+删除从offset开始到offset+length结束的所有元素，并以数组的形式返回删除的元素 
+array array_splice(array, int offset [,int length[,array peplacement]]) 
+
+求数组的交集,键值为第一个数组中键值 
+array array_intersect(array array1,array array2[,arrayN……]) 
+
+求数组的交集包含了键值相等,键值为第一个数组中键值 
+array array_intersect_assoc(array array1,array array2[,arrayN……]) 
+
+求数组的差集，第一个数组在其他数组没有的值 
+array array_diff(array array1,array array2[,arrayN……]) 
+
+求数组的差集，第一个数组在其他数组没有的值包含了键值相等 
+array array_diffassoc(array array1,array array2[,arrayN……]) 
+
+返回数组中一个或多个键值 
+mixed array_rand(array array[,int num_entries]) 
+
+随即洗牌函数 
+void shuffle(array input_array) 
+
+对数组中的值求和 
+mixed array_sum(array array); 
+
+将数组分解为一个多维数组，它包含了size个元素 
+array array_chunk(array array, int size [,boolean preserve_keys]) 

@@ -1,0 +1,365 @@
+  gmail帐号密码  wangguo0801@gmail.com               我想大声告诉你
+               Wg19910801  963025wg	                     明天你好（牛奶咖啡）					
+腾讯企业邮箱  wangg@kaensoft.com                         晚安 丢火车QQ密码：slienceguo
+               963025wG                                                 国泰君安 ctp  676677  4418  8660   7000  12321   2000
+网易邮箱 m15221268463@163.com                          3400     1300
+              963025wg               T 1395319611             14321  17721   19021 -1600  19896-1300  19395
+Guoguo81  GM帐号  WWWgg963025                       17621278291 联通
+Linux操作系统
+bat/Shell/Perl/Python                                               v9  :
+673543654@qq.com  
+:
+daohaosidie
+对shell了解；  
+小程序  gmail帐号 密码963025
+                                                           登录账户和密码 676610  294011
+                                                                                 帐号密码  676677
+17601395301                   卖是空  就是买跌     买是多  就是买涨是吧
+阿里云邮箱 xiaowangguo@aliyun.com	  ANDROID_HOME
+963025wg		       走着走着就散了庄心妍	
+莱阳周边  shopmgr
+               ！1234shop
+天涯社区  帐号 15221268463 尛果果
+                      密码 963025wg
+aleeloryqq    1314521
+woaigujie密码881204
+825099
+住房171517532205
+用 户 名：
+guohah
+公积金账号：
+171517532205
+身份证号：
+411327199004023934
+手机号码：
+15221268463
+15879550137/HOU920815  爱奇艺
+435714536   morgan--0925  腾          
+用户密码 963025wg  支付密码 wg963025 京东Eka（改后的支付密码guoguo963025）
+DH16042600475
+oyuywkwu
+注册分期 登录密码 guohah963025  支付i吗963025
+15821809262 顺丰
+电话密码963025 提现密码 963025
+http://static.wxkydd.com/libs/jquery/2.1.4/jquery.min.js
+http://static.wxkydd.com/libs/blendui/200/boost200.min.css
+http://static.wxkydd.com/libs/blendui/200/boost200.min.js
+
+http://static.wxkydd.com/libs/    css. js类库
+放到这个目录下D:\wamp\bin\php\php5.3.10\ext
+然后php.ini  中加extension=php_redis.dll
+extension=php_memcache.dll
+
+嵊泗
+你站在桥上看风景 
+看风景人在楼上看你 
+明月装饰了你的窗子 
+你装饰了别人的梦 
+不知道，她是谁的风景，谁又能装饰了她的梦
+梦一场  你一个人的时候其实会做些什么呢
+girl ni your dream
+group by
+1.乌班图 一个基于GNU/Linux 平台的操作系统  Ubuntu
+
+2.a.equals(b) 字符串 值相等  ==  值和类型都相等
+  a.compareTo(b) a>b  1
+3. 三木运算符 
+  int max = a> b ? a : b;
+  int min = a < b ? a : b;
+  System.out.println();
+
+ int a = 5;
+ int b = 3;
+ int c = 7;
+定义一个变量存放 三个变量中的最大值
+ 
+  int max;
+  max = a > b ? a : b;
+  max = max > c ? max :c;
+  int min;
+     ( a < b ? a : b ) < c ? ( a < b ? a : b ) : c;
+   赋值运算符
+
+ 4.switch结构
+   定义变量存放年份 月份 输出年月多少天
+
+
+
+、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、
+
+系统问题
+
+linux Linux操作系统及驱动
+
+问题
+
+php 双引号 单引号
+        单引号表示字符串，不自动解析变量。
+        双引号表示字符串，自动解析变量。
+        {}表示变量名的界定符
+   
+     print_r() 预览数组，只能显示数组中的值
+     var_dump() 显示变量的类型和值，也可以显示数组
+   
+     isset() 和 empty() 的区别
+     isset() 判断变量是否存在，是否已经被定义
+     empty() 判断变量中的值是否为空
+     魔术函数
+
+     HP常用函数
+
+设置字符串的编码格式
+String  mb_convert_encoding( String str , String to_encoding,String from_encoding )
+            str  要转换编码格式的字符串
+            to_encoding  转换后的编码格式
+            from_encoding  转换前的编码格式
+
+替换字符串中的内容
+String str_replace( String search , String replace , String subject )
+            search  要查找的字符串
+            replace 要替换成的字符串
+            subject 原字符串
+
+将字符串拆分成数组
+Array explode( String delimt ,String str )
+
+将数组拼接成字符串
+String implode( String glue , Array arr )
+
+获取字符串中的字节长度
+int strlen( String str )
+
+获取字符串中的字符长度
+int mb_strlen( String str , String encoding )
+
+以字节为单位截取字符串
+String substr( String str, int beginIndex )
+String substr( String str, int beginIndex , int length )
+
+以字符为单位截取字符串
+String mb_substr( String str , int beginIndex, String encoding )
+String mb_substr( String str , int beginIndex, int length ,String encoding )
+
+
+JQ输出问题
+    alert
+    console.log 打印相关信息
+
+php输出
+      print_r() 预览数组，只能显示数组中的值
+     var_dump() 显示变量的类型和值，也可以显示数组
+
+
+	public $cart_contents_count;
+
+	/** @var float Cart grand total. */
+	public $total;
+
+1 kaensoft-weixin-core 插件 - 管理微信自动登入
+2 对方公众号需要拿到appid 和 appsecret （appsecret需要授权显示）
+3 配置到插件的几个参数
+appid
+appsecret
+display_name 前缀
+rawid （公众号原始id，在公众号设置页面）
+8
+@cyx.chebaiwen.com
+
+
+网页授权验证的安全域名
+cyx.chebaiwen.com
+
+公众号功能设置
+js的安全域名 - for jssdk
+业务域名 - for 禁止安全提示
+
+配置oathur链接
+  
+恶补英文
+
+query  row  results
+var random = parseInt(Math.random() * 3);
+内存 IO
+脱库：是指通过非法手段获取网站的数据库,会员的信息或者自己需要的信息.
+infinite 循环
+ display: inline-block;
+
+animation.css  
+http://www.swiper.com.cn/usage/animate/
+https://github.com/anicollection/anicollection/tree/f998306f29ae1d130eebcd4c64a9c9737a7613e9/dist
+    网址     anicollection.css
+hinge
+rollIn 滚动进入
+rollOut  滚出
+zoomInDown  自下而上 淡出 从里到外
+zoomInLeft从里面渐渐出现
+zoomInUp
+zoomOutDown  逐渐消失
+slideInDown  
+slideInLeft  从侧边 进入
+slideOutDown  向下一段距离消失
+slideInUp 开始位置 向上一段距离
+slideOutRight 侧边一出
+bounce 跳两下
+flash 闪烁两次
+pulse 抖动
+rubberBand  tada
+shake 晃动
+swing 原点摆动
+wobble 整体摆动  bounceIn 抖动 幅度达
+fadeInDown 渐入
+flipInY  lightSpeedIn扭曲
+rotateInUpLeft    rotateOut
+/**********************************************************************/
+bounceIn 
+ani.js  class  /**********/
+bounceIn animated infinite
+rubberBand拉长压缩
+
+tail -f  /var/log/nginx/dev_wp_dev.error.log 查询错误日志
+
+desc
+
+PHP框架都是以一个index.php文件作为入口，其他基本上就是路由加映射
+匿名函数和闭包
+function  后exit 不然返回有0；
+jq  取正数
+根据UA判断系统
+//判断安卓还是IOS
+          var ua = navigator.userAgent.toLowerCase();
+          if ( /iphone|ipad|ipod/.test(ua) ) {
+            alert("iphone");
+          }else if ( /android/.test(ua) ) {
+            alert("android");
+          }
+
+1安卓怎么连接数据库
+2sqlite本地数据库
+@Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+
+        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+                        .setAction("Action", null).show();
+            }
+        });
+
+        Button button=(Button)findViewById(R.id.button);
+        button.setOnClickListener(new View.OnClickListener() {
+                                      @Override
+                                      public void onClick(View v) {
+                                         // TextView txt=(TextView)findViewById(R.id.txtView);
+                                         // txt.setText("this is my first app ,GuoGuo");
+               	            Uri uri = Uri.parse("http://baike.baidu.com/view/753813.htm");
+            		            Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+          		            startActivity(intent);
+                                      }
+                                  }
+
+        );
+
+
+    }
+
+
+
+环球飞机是198*2
+星座石是198*2
+XO158*1
+四叶草158*2
+白色的生日石198*1
+浅卡其色128*2
+1728
+                  <div class="row" style="margin-right: 0;margin-left: 0">
+                    <div class="col-xs-6 row_guoguoa" data-product-id="0">已评价</div>
+                    <?php }else{
+                  ?>
+                    <div class="col-xs-6 row_guoguoa" data-product-id="<?php echo $product->id;?>"><i class="iconfont" style="font-size: 13px">&#xe634;</i>发表评论</div>
+                  <?php
+              }?>
+                    <div class="col-xs-6 ckpl">查看评论</div>
+                    <?php if( $type_status ): ?>
+			        	<div class="after_salecolumn1">七天无理由，换货</div>
+                    <?php else: ?>
+			        	<div class="after_salecolumn2">商品已过七天，请您详细描述退/换货原因</div>
+                    <?php endif; ?>
+
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:app2="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.guo.myapplication.MainActivity"
+    tools:showIn="@layout/activity_main">
+
+    <TextView
+        android:layout_width="180dp"
+        android:layout_height="82dp"
+        android:text="@string/textview_name"
+        android:id="@+id/txtView"
+        android:textAlignment="center"
+        app:layout_constraintLeft_toLeftOf="@+id/content_main"
+        android:layout_marginStart="16dp"
+        app:layout_constraintTop_toTopOf="@+id/content_main"
+        android:layout_marginTop="16dp"
+        app:layout_constraintRight_toRightOf="@+id/content_main"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/button"
+        android:layout_marginBottom="8dp" />
+
+    <Button
+        android:text="@string/button_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:alpha="1"
+         android:background="@color/colorPrimaryDark"
+        android:visibility="visible"
+        style="@style/Widget.AppCompat.Button"
+        app:layout_constraintLeft_toLeftOf="@+id/content_main"
+        android:layout_marginStart="16dp"
+        app:layout_constraintTop_toTopOf="@+id/content_main"
+        android:layout_marginTop="16dp"
+        app:layout_constraintRight_toRightOf="@+id/content_main"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/content_main"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintVertical_bias="0.75" />
+
+</android.support.constraint.ConstraintLayout>
+
+android {
+    compileSdkVersion 22
+    buildToolsVersion "22.0.1"
+
+    defaultConfig {
+        minSdkVersion 14
+        targetSdkVersion 22
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile 'com.android.support:appcompat-v7:22.2.1'
+}
+
+
+18499120238   898602c99816c1500547
+克制委曲求全的关系中  安全友善却不幸福

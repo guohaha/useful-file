@@ -1,0 +1,119 @@
+﻿大家知道CodeIgniter框架式MVC分层的，通常大家把业务逻辑写到Controller中，而Model只负责和数据库打交道。
+　　但是随着业务越来越复杂，controller越来越臃肿，举一个简单的例子，比如说用户下订单，这必然会有一系列的操作：更新购物车、添加订单记录、会员添加积分等等，且下订单的过程可能在多种场景出现，如果这样的代码放controller中则很臃肿难以复用，如果放model会让持久层和业务层耦合。现在公司的项目就是，很多人将一些业务逻辑写到model中去了，model中又调其它model，也就是业务层和持久层相互耦合。这是极其不合理的，会让model难以维护，且方法难以复用。
+　　是不是可以考虑在controller和model中加一个业务层service，由它来负责业务逻辑，封装好的调用接口可以被controller复用。
+　　这样各层的任务就明确了：
+　　Model(DAO):数据持久层的工作，对数据库的操作都封装在这。
+　　Service ： 业务逻辑层，负责业务模块的逻辑应用设计，controller中就可以调用service的接口实现业务逻辑处理，提高了通用的业务逻辑的复用性，设计到具体业务实现会调用Model的接口。
+　　Controller ：控制层，负责具体业务流程控制，这里调用service层，将数据返回到视图
+　　View ： 负责前端页面展示，与Controller紧密联系。
+　　基于上面描述，实现过程：
+　　（1）让CI能够加载service,service目录放在application下，因为CI系统没有service，则在application/core下新建扩展MY_Service.php
+　　复制代码 代码如下:
+
+　　<?php
+　　class MY_Service
+　　{
+　　public function __construct()
+　　{
+　　log_message('debug', "Service Class Initialized");
+　　}
+　　function __get($key)
+　　{
+　　$CI = & get_instance();
+　　return $CI->$key;
+　　}
+　　}
+　　（2）扩展CI_Loader实现，加载service，在application/core下新建MY_Loader.php文件：
+　　复制代码 代码如下:
+
+　　<?php
+　　class MY_Loader extends CI_Loader
+　　{
+　　/**
+　　* List of loaded sercices
+　　*
+　　* @var array
+　　* @access protected
+　　*/
+　　protected $_ci_services = array();
+　　/**
+　　* List of paths to load sercices from
+　　*
+　　* @var array
+　　* @access protected
+　　*/
+　　protected $_ci_service_paths  = array();
+　　/**
+　　* Constructor
+　　*
+　　* Set the path to the Service files
+　　*/
+　　public function __construct()
+　　{
+　　parent::__construct();
+　　$this->_ci_service_paths = array(APPPATH);
+　　}
+　　/**
+　　* Service Loader
+　　*
+　　* This function lets users load and instantiate classes.
+　　* It is designed to be called from a user's app controllers.
+　　*
+　　* @param string the name of the class
+　　* @param mixed the optional parameters
+　　* @param string an optional object name
+　　* @return void
+　　*/
+　　public function service($service = '', $params = NULL, $object_name = NULL)
+　　{
+　　if(is_array($service))
+　　{
+　　foreach($service as $class)
+　　{
+　　$this->service($class, $params);
+　　}
+　　return;
+　　}
+　　if($service == '' or isset($this->_ci_services[$service])) {
+　　return FALSE;
+　　}
+　　if(! is_null($params) && ! is_array($params)) {
+　　$params = NULL;
+　　}
+　　$subdir = '';
+　　// Is the service in a sub-folder? If so, parse out the filename and path.
+　　if (($last_slash = strrpos($service, '/')) !== FALSE)
+　　{
+　　// The path is in front of the last slash
+　　$subdir = substr($service, 0, $last_slash + 1);
+　　// And the service name behind it
+　　$service = substr($service, $last_slash + 1);
+　　}
+　　foreach($this->_ci_service_paths as $path)
+　　{
+　　$filepath = $path .'service/'.$subdir.$service.'.php';
+　　if ( ! file_exists($filepath))
+　　{
+　　continue;
+　　}
+　　include_once($filepath);
+　　$service = strtolower($service);
+　　if (empty($object_name))
+　　{
+　　$object_name = $service;
+　　}
+　　$service = ucfirst($service);
+　　$CI = &get_instance();
+　　if($params !== NULL)
+　　{
+　　$CI->$object_name = new $service($params);
+　　}
+　　else
+　　{
+　　$CI->$object_name = new $service();
+　　}
+　　$this->_ci_services[] = $object_name;
+　　return;
+　　}
+　　}
+　　}

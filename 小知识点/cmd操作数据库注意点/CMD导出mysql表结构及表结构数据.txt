@@ -1,0 +1,28 @@
+﻿ CMD导出mysql表结构及表结构数据（mysqldump）
+分类： 数据库 2014-11-17 09:35 281人阅读 评论(0) 收藏 举报
+CMDmysql表结构表数据mysqldump
+
+数据库：uniquedu_home
+
+用户名：root
+
+密码：admin123
+
+导出脚本名及路径：C:\db.sql
+
+（输入下面命令中的任何一个后、敲Enter键，然后输入数据库密码）
+
+
+1、导出数据库为uniquedu_home的表结构
+
+
+   mysqldump -u root -p  -d uniquedu_home >c:\db.sql
+
+2、导出数据库为uniquedu_home某张表(check_zk_log)结构（加-d）
+   mysqldump -u root -p -d uniquedu_home check_zk_log>c:\db.sql
+
+3、导出数据库为uniquedu_home所有表结构及表数据（不加-d）
+    mysqldump -u root -p uniquedu_home >c:\db.sql
+
+4、导出数据库为uniquedu_home某张表(check_zk_log)结构及表数据（不加-d）
+    mysqldump -u root -p uniquedu_home check_zk_log>c:\db.sql
